@@ -34,10 +34,28 @@ h1 {
 .answer-container {
   margin-top: 16px;
   align-items: center;
+  position: relative;
+  left: 23%;
 }
 
 .answer-container button {
+  background-color: #bdeaf6;
+  border: none;
+  width: 250px;
   margin-bottom: 8px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 15px;
+  margin: 8px;
+  padding: 4px;
+  display: block;
+}
+
+.answer-container button:hover {
+  color: black;
+  background-color: white;
+  transition-duration: 0.4s;
+  border: 2px solid #bdeaf6;
 }
 
 .App-logo {
