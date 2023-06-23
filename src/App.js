@@ -2,6 +2,7 @@ import React from 'react';
 
 import questions from './questions';
 import Quiz from './quiz';
+import './App.css'
 
 function App() {
     return (

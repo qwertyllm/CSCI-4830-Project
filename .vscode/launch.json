@@ -1,6 +1,25 @@
 {
   "version": "0.2.0",
   "configurations": [
+    /*opens up in chrome or edge. Simply change your default browser to chrome if
+     *you wish to open in chrome, then run the npm start command like normal
+     *in the terminal,
+     if you wish to open in firefox, copy and paste the code below and change 
+     to firefox and install the configuration for firefox.
+    */
+
+    /*Errors 
+     *Please use type chrome instead
+     *The debug type is not recognized. Make sure that you have a corresponding debug extension
+     *are normal
+    */
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "localhost (Chrome)",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
+    },
     {
       "type": "edge",
       "request": "launch",
@@ -9,11 +28,12 @@
       "webRoot": "${workspaceFolder}"
     },
     {
-      "type": "chrome",
+      "name": "Launch localhost",
+      "type": "firefox",
       "request": "launch",
-      "name": "localhost (Chrome)",
-      "url": "http://localhost:3000",
+      "reAttach": true,
+      "url": "http://localhost/index.html",
       "webRoot": "${workspaceFolder}"
-    }
+  }
   ]
 }

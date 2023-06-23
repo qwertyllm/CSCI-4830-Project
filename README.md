@@ -1,3 +1,16 @@
+index.html info for site
+questions.js questions and math area for questions
+quiz.js system reads and info processing in backend, Also returns best fits and score
+App.js functionality of app by importing all other important files
+App.css css structure for the app
+
+
+to push changes to github repository
+change(cd) to folder of the local repository
+git add .
+git commit -m "Description of changes"
+git push origin master
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

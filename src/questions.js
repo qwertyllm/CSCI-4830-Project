@@ -3,6 +3,9 @@
 // for now it's silly and requires 0 for all the other answers as it doesn't like null values, feel free to change but this should do for now
 
 const questions = [
+
+    //Question 1
+
     {
         questionText: 'Question 1: pick a college',
         answerOptions: [
@@ -44,6 +47,8 @@ const questions = [
             },
         ],
     },
+
+    //Question 2
 
     {
         questionText: 'Question 2: pick a college',
@@ -87,7 +92,7 @@ const questions = [
         ],
     },
 
-
+    //Question 3
 
 
     

@@ -1,10 +1,8 @@
-import React from 'react';
-import questions from './questions';
-
-
-
 // this file contains core backend functionality
 
+
+import React from 'react';
+import questions from './questions';
 
 function Quiz() {
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
@@ -18,6 +16,7 @@ function Quiz() {
         collegeSCITECH: 0,
         collegePUBLIC: 0,
     });
+
     // reads button presses and updates scores as needed.
     const handleAnswerButtonClick = (scores) => {
         setScores((prevScores) => ({
@@ -41,25 +40,40 @@ function Quiz() {
         }
     };
 
+    // finds the colleges that have the max value and returns them
+    const bestFits = (scores) => {
+        let maxValue = 0;
+        for (const [key, value] of Object.entries(scores)) {
+            maxValue = Math.max(maxValue, value)
+        }
+        let bestFits = [];
+        for (const [key, value] of Object.entries(scores)) {
+            if (maxValue == value) {
+                bestFits.push(key);
+            }
+        }
+        return bestFits.join(' and ');
+    }
+
     // the final screen shows all points accumulated for testing purposes.
-    // please change it to only show top college point totals or something
     return (
-        <div>
+        <div className="question-container">
+
             {showScore ? (
-                <div>
+                
+                <div className="final-result-container">
                     <h2>Quiz Results</h2>
-                    <h3>collegeARTSCI   : {scores.collegeARTSCI}</h3>
-                    <h3>collegeBA       : {scores.collegeBA}</h3>
-                    <h3>collegeEDU      : {scores.collegeEDU}</h3>
-                    <h4>collegeCOM      : {scores.collegeCOM}</h4>
-                    <h5>collegeSCITECH  : {scores.collegeSCITECH}</h5>
-                    <h6>collegePUBLIC   : {scores.collegePUBLIC}</h6>
+                    <h3>Best Fits: {[bestFits(scores)]}</h3>
+                    <br></br>
                 </div>
+
             ) : (
                 // handles displaying buttons and the current question. 
                 // pulls questions from questions.js
-                <div>
+                <div className="question-card">
+                    <h2><div className="question-number">Question {currentQuestion + 1} of  {questions.length}</div></h2>
                     <h2>{questions[currentQuestion].questionText}</h2>
+                    <div className="answer-container">
                     {questions[currentQuestion].answerOptions.map((answerOption, index) => (
                         <button
                             key={index}
@@ -68,8 +82,10 @@ function Quiz() {
                             {answerOption.answerText}
                         </button>
                     ))}
+                    </div>
                 </div>
             )}
+
         </div>
     );
 }
