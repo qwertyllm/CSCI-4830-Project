@@ -2,7 +2,7 @@ index.html info for site. \
 questions.js questions and math area for questions. \
 quiz.js system reads and info processing in backend, also returns best fits and score. \
 App.js functionality of app by importing all other important files. \
-App.css css structure for the app. \
+App.css css structure for the app.
 
 
 to push changes to github repository \
