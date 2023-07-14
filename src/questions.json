@@ -1,0 +1,32 @@
+[
+    {
+        "QuestionText" : "Question 1: pick a college",
+        "answerOptions": ["Arts and Sciences", "Business and Administration", "Education", "Communications", "Science and Technology", "Public Affairs"],
+        "scores"       : [1, 1, 1, 1, 1, 1]
+    },
+    {
+        "questionText" : "Question 2: pick a college",
+        "answerOptions": ["Arts and Sciences", "Business and Administration", "Education", "Communications", "Science and Technology", "Public Affairs"],
+        "scores"       : [1, 1, 1, 1, 1, 1]
+    },
+    {
+        "questionText" : "Question 3: This is an example but the right answer is Education",
+        "answerOptions": ["Arts and Sciences", "Business and Administration", "Education", "Communications", "Science and Technology", "Public Affairs"],
+        "scores"       : [0, 0, 1, 0, 0, 0]
+    },
+    {
+        "questionText" : "Question 4: This is an example but the right answer is anything but Communications",
+        "answerOptions": ["Arts and Sciences", "Business and Administration", "Education", "Communications", "Science and Technology", "Public Affairs"],
+        "scores"       : [1, 1, 1, 0, 1, 1]
+    },
+    {
+        "questionText" : "Question 5: Choose any college but some are worth more than others",
+        "answerOptions": ["Arts and Sciences", "Business and Administration", "Education", "Communications", "Science and Technology", "Public Affairs"],
+        "scores"       : [0, 1, 2, 3, 4, 5]
+    },
+    {
+        "questionText" : "Question 6: What is your favorite college of the followin",
+        "answerOptions": ["Arts and Sciences", "Business and Administration", "Education", "Communications", "Science and Technology", "Public Affairs"],
+        "scores"       : [5, 5, 5, 5, 5, 5]
+    }
+]
