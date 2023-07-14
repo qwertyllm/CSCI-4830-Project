@@ -1,15 +1,23 @@
-index.html info for site
-questions.js questions and math area for questions
-quiz.js system reads and info processing in backend, Also returns best fits and score
-App.js functionality of app by importing all other important files
-App.css css structure for the app
+index.html info for site. \
+questions.js questions and math area for questions. \
+quiz.js system reads and info processing in backend, also returns best fits and score. \
+App.js functionality of app by importing all other important files. \
+App.css css structure for the app. \
 
 
-to push changes to github repository
-change(cd) to folder of the local repository
-git add .
-git commit -m "Description of changes"
-git push origin master
+to push changes to github repository \
+change(cd) to folder of the local repository \
+git add . \
+git commit -m "Description of changes" \
+git push origin master \
+
+To do
+update the results page to have nicer features. \
+Update the layout. \
+Make it so an administrator can change the questions in the backend. \
+Updating the readme \
+Focusing on question quality \
+Focus on user experience \
 
 # Getting Started with Create React App
 
