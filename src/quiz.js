@@ -40,6 +40,20 @@ function Quiz() {
         }
     };
 
+    const handlePreviousButtonClick = () => {
+        const previousQuestion = currentQuestion - 1
+        if(previousQuestion >= 0){
+            setCurrentQuestion(previousQuestion);
+        }
+    };
+    const handleNextButtonClick = () => {
+        const nextQuestion = currentQuestion + 1
+        if(nextQuestion < questions.length){
+            setCurrentQuestion(nextQuestion);
+        }
+    };
+
+
     // finds the colleges that have the max value and returns them
     const bestFits = (scores) => {
         let maxValue = 0;
@@ -83,6 +97,10 @@ function Quiz() {
                         </button>
                     ))}
                     </div>
+                    <div className="nextPrev">
+                            {currentQuestion > 0 && (<button className="previous-button" onClick={handlePreviousButtonClick}>Previous</button>)}
+                            {currentQuestion < questions.length - 1 && (<button className="next-button" onClick={handleNextButtonClick}>Next</button>)}
+                        </div>
                 </div>
             )}
 
