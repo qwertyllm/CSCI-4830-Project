@@ -11,7 +11,7 @@ git add . \
 git commit -m "Description of changes" \
 git push origin master 
 
-To do
+To do \
 update the results page to have nicer features. \
 Update the layout. \
 Make it so an administrator can change the questions in the backend. \
