@@ -1,32 +1,113 @@
 [
     {
-        "QuestionText" : "Question 1: pick a college",
+        "QuestionText" : "Question 1: The assignments I finish first are...",
         "answerOptions": ["Arts and Sciences", "Business and Administration", "Education", "Communications", "Science and Technology", "Public Affairs"],
         "scores"       : [1, 1, 1, 1, 1, 1]
     },
     {
-        "questionText" : "Question 2: pick a college",
+        "questionText" : "Question 2: Where would you rather vacation?",
         "answerOptions": ["Arts and Sciences", "Business and Administration", "Education", "Communications", "Science and Technology", "Public Affairs"],
         "scores"       : [1, 1, 1, 1, 1, 1]
     },
     {
-        "questionText" : "Question 3: This is an example but the right answer is Education",
+        "questionText" : "Question 3: Where do you excel in school?",
         "answerOptions": ["Arts and Sciences", "Business and Administration", "Education", "Communications", "Science and Technology", "Public Affairs"],
         "scores"       : [0, 0, 1, 0, 0, 0]
     },
     {
-        "questionText" : "Question 4: This is an example but the right answer is anything but Communications",
+        "questionText" : "Question 4: When going to college, what are you focused on learning more about?",
         "answerOptions": ["Arts and Sciences", "Business and Administration", "Education", "Communications", "Science and Technology", "Public Affairs"],
         "scores"       : [1, 1, 1, 0, 1, 1]
     },
     {
-        "questionText" : "Question 5: Choose any college but some are worth more than others",
+        "questionText" : "Question 5: What conference of the following would you attend?",
         "answerOptions": ["Arts and Sciences", "Business and Administration", "Education", "Communications", "Science and Technology", "Public Affairs"],
         "scores"       : [0, 1, 2, 3, 4, 5]
     },
     {
-        "questionText" : "Question 6: What is your favorite college of the followin",
+        "questionText" : "Question 6: What subreddit would you rather join??",
         "answerOptions": ["Arts and Sciences", "Business and Administration", "Education", "Communications", "Science and Technology", "Public Affairs"],
+        "scores"       : [5, 5, 5, 5, 5, 5]
+    },
+    {
+        "questionText" : "Question 7: What did you look forward to most in school?",
+        "answerOptions": ["English", "Leading others", "Tutoring others", "Talking with other students", "Mathematics", "Speech/Debate"],
+        "scores"       : [1, 1, 1, 1, 1, 1]
+    },
+    {
+        "questionText" : "Question 7: I like to have a range of correct answers when answering questions?",
+        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
+        "scores"       : [5, 5, 5, 5, 5, 5]
+    }
+    ,
+    {
+        "questionText" : "Question 8: The assignments I found the easiest/enjoyed the most are...",
+        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
+        "scores"       : [5, 5, 5, 5, 5, 5]
+    },
+    {
+        "questionText" : "Question 8: I like the idea of having a right and wrong answer?",
+        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
+        "scores"       : [5, 5, 5, 5, 5, 5]
+    },
+    {
+        "questionText" : "Question 9: Where would you rather solve a problem?",
+        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
+        "scores"       : [5, 5, 5, 5, 5, 5]
+    },
+    {
+        "questionText" : "Question 10: I enjoy the idea of working from home?",
+        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
+        "scores"       : [5, 5, 5, 5, 5, 5]
+    },
+    {
+        "questionText" : "Question 11: I am not confortable leading a team?",
+        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
+        "scores"       : [5, 5, 5, 5, 5, 5]
+    },
+    {
+        "questionText" : "Question 12: I like things being in order",
+        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
+        "scores"       : [5, 5, 5, 5, 5, 5]
+    },
+    {
+        "questionText" : "Question 13: I like having creative freedom",
+        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
+        "scores"       : [5, 5, 5, 5, 5, 5]
+    },
+    {
+        "questionText" : "Question 14: I have a wild imagination",
+        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
+        "scores"       : [5, 5, 5, 5, 5, 5]
+    },
+    {
+        "questionText" : "Question 15: I enjoy being able to communicate with others",
+        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
+        "scores"       : [5, 5, 5, 5, 5, 5]
+    },
+    {
+        "questionText" : "Question 16: Of the following people, whos class would you rather attend??",
+        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
+        "scores"       : [5, 5, 5, 5, 5, 5]
+    },
+    {
+        "questionText" : "Question 17: I enjoy technical things",
+        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
+        "scores"       : [5, 5, 5, 5, 5, 5]
+    },
+    {
+        "questionText" : "Question 18: What project would you rather be apart of?",
+        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
+        "scores"       : [5, 5, 5, 5, 5, 5]
+    },
+    {
+        "questionText" : "Question 19: What kind of class would you rather attend?",
+        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
+        "scores"       : [5, 5, 5, 5, 5, 5]
+    },
+    {
+        "questionText" : "Question 20: I am a follower?",
+        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
         "scores"       : [5, 5, 5, 5, 5, 5]
     }
 ]
