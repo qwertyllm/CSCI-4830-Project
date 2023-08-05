@@ -4,12 +4,39 @@ quiz.js system reads and info processing in backend, Also returns best fits and 
 App.js functionality of app by importing all other important files
 App.css css structure for the app
 
-
 to push changes to github repository
 change(cd) to folder of the local repository
 git add .
 git commit -m "Description of changes"
 git push origin master
+-------------------------------------------------------------------------------------
+to run reactapp on the local network first 
+
+cd to the src folder
+
+start the server by using node server.js in terminal
+
+then make a new terminal and
+
+cd to the CSCI-4830-Project folder
+
+find ipv4 address using ipconfig
+change the host using HOST=ip-address npm start
+the server automatically listens to the server on port 3000
+
+for users to join "http://ip-address-of-host:3000"
+
+for administrators, login to http://localhost:3000/admin/login
+otherwise for users, just go to http://localhost:3000
+because this is a testing version, admin username and password is stored in the code in
+
+
+--------------------------------------------------------------------------------------
+Otherwise, for testing just use npm start
+--------------------------------------------------------------------------------------
+to kill a port
+netstat -ano | findstr :3000
+taskkill /PID num  /F
 
 # Getting Started with Create React App
 
