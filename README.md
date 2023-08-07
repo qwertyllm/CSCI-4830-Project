@@ -1,16 +1,13 @@
-index.html info for site
-questions.js questions and math area for questions
-quiz.js system reads and info processing in backend, Also returns best fits and score
-App.js functionality of app by importing all other important files
-App.css css structure for the app
-
 to push changes to github repository
 change(cd) to folder of the local repository
 git add .
 git commit -m "Description of changes"
 git push origin master
+
 -------------------------------------------------------------------------------------
-to run reactapp on the local network first 
+to run reactapp on the local network as an administrator,
+
+first 
 
 cd to the src folder
 
@@ -21,23 +18,30 @@ then make a new terminal and
 cd to the CSCI-4830-Project folder
 
 find ipv4 address using ipconfig
-change the host using HOST=ip-address npm start
-the server automatically listens to the server on port 3000
+
+change the host using 
+$env:HOST="192.168.56.1"; npm start
+the server automatically listens in on port 3001
 
 for users to join "http://ip-address-of-host:3000"
 
-for administrators, login to http://localhost:3000/admin/login
+for administrators, login to http://localhost:3000/admin/login with username = admin
+password = password , you can change the credentials in AdminLogin.js
+
+which takes you to http://localhost:3000/admin/backend
+
 otherwise for users, just go to http://localhost:3000
 because this is a testing version, admin username and password is stored in the code in
 
 
 --------------------------------------------------------------------------------------
-Otherwise, for testing just use npm start
+Otherwise, for testing just use npm start, without starting a server
 --------------------------------------------------------------------------------------
+
 to kill a port
 netstat -ano | findstr :3000
 taskkill /PID num  /F
-
+--------------------------------------------------------------------------------------
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

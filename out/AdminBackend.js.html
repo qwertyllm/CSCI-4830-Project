@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: AdminBackend.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: AdminBackend.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { useEffect, useState } from "react";
+import axios from "axios";
+
+/**
+ * AdminBackend Component - Backend interface for administrators to manage quiz questions.
+ *
+ * The AdminBackend component provides an interface for administrators to view, edit, and save quiz questions.
+ * It fetches the questions from the server using axios and allows administrators to edit the question text,
+ * answer options, and scores associated with each option.
+ *
+ * State Management:
+ * - `questions`: An array of questions fetched from the server.
+ * - `editingIndex`: The index of the question currently being edited, or `null` if no question is being edited.
+ * - `editingQuestion`: An object representing the question currently being edited, with properties for the question text, answer options, and scores.
+ *
+ * Main Functionalities:
+ * - Redirects non-admin users to the admin login page.
+ * - Fetches questions from the server and stores them in the state.
+ * - Allows administrators to edit questions, including the question text, answer options, and scores.
+ * - Sends updated questions to the server and updates the local state with the changes.
+ *
+ * @returns {React.Element} The rendered component, including the list of questions and editing interface for administrators.
+ */
+function AdminBackend() {
+  const [questions, setQuestions] = useState([]);
+  const [editingIndex, setEditingIndex] = useState(null);
+  const [editingQuestion, setEditingQuestion] = useState({
+    questionText: "",
+    answerOptions: [],
+    scores: []
+  });
+
+  useEffect(() => {
+    if (localStorage.getItem("isAdmin") !== "true") {
+      window.location.href = "/admin/login";
+    } else {
+      axios
+        .get("http://localhost:3001/api/questions")
+        .then((response) => setQuestions(response.data))
+        .catch((error) => console.log(error));
+    }
+  }, []);
+
+  const handleEditClick = (index) => {
+    setEditingIndex(index);
+    setEditingQuestion({ ...questions[index] });
+  };
+
+  const handleQuestionChange = (event) => {
+    setEditingQuestion(prev => ({ ...prev, questionText: event.target.value }));
+  };
+
+  const handleOptionChange = (idx) => (event) => {
+    const options = [...editingQuestion.answerOptions];
+    options[idx] = event.target.value;
+    setEditingQuestion(prev => ({ ...prev, answerOptions: options }));
+  };
+
+  const handleScoreChange = (idx) => (event) => {
+    const scores = [...editingQuestion.scores];
+    scores[idx] = Number(event.target.value);
+    setEditingQuestion(prev => ({ ...prev, scores }));
+  };
+
+  const handleSaveClick = () => {
+    axios
+      .put(`http://localhost:3001/api/questions/${editingIndex}`, editingQuestion)
+      .then((response) => {
+        const updatedQuestions = [...questions];
+        updatedQuestions[editingIndex] = editingQuestion;
+        setQuestions(updatedQuestions);
+        setEditingIndex(null);
+      })
+      .catch((error) => console.log(error));
+  };
+
+  return (
+    &lt;div>
+      &lt;h1>Admin Backend&lt;/h1>
+      {questions.map((question, index) => (
+        &lt;div key={index}>
+          {editingIndex === index ? (
+            &lt;>
+              &lt;input
+                type="text"
+                value={editingQuestion.questionText}
+                onChange={handleQuestionChange}
+              />
+              {editingQuestion.answerOptions.map((option, idx) => (
+                &lt;input
+                  type="text"
+                  value={option}
+                  onChange={handleOptionChange(idx)}
+                  key={idx}
+                />
+              ))}
+              {editingQuestion.scores.map((score, idx) => (
+                &lt;input
+                  type="number"
+                  value={score}
+                  onChange={handleScoreChange(idx)}
+                  key={idx}
+                />
+              ))}
+              &lt;button onClick={handleSaveClick}>Save&lt;/button>
+            &lt;/>
+          ) : (
+            &lt;>
+              &lt;p>{question.questionText}&lt;/p>
+              {question.answerOptions.join(", ")}
+              &lt;br/>
+              {question.scores.join(", ")}
+              &lt;button onClick={() => handleEditClick(index)}>Edit&lt;/button>
+            &lt;/>
+          )}
+        &lt;/div>
+      ))}
+    &lt;/div>
+  );
+}
+
+export default AdminBackend;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-questions.html">questions</a></li><li><a href="module-server.html">server</a></li></ul><h3>Global</h3><ul><li><a href="global.html#AdminBackend">AdminBackend</a></li><li><a href="global.html#AdminLogin">AdminLogin</a></li><li><a href="global.html#App">App</a></li><li><a href="global.html#Quiz">Quiz</a></li><li><a href="global.html#root">root</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Mon Aug 07 2023 15:45:44 GMT-0500 (Central Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

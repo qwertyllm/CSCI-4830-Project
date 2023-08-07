@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Global</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Global</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2></h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="root"><span class="type-signature">(constant) </span>root<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    Entry Point for the React Application - Initializes and renders the main App component.This file serves as the entry point for the React application. It imports the main App componentand renders it inside a root element obtained from the DOM. The application is rendered usingReact's Concurrent Mode, which enables more responsive rendering.Additionally, this file includes a call to the `reportWebVitals` function, which can be used tomeasure and report on various web vital statistics related to the performance of the application.Main Functionalities:- Obtains the root DOM element where the React application will be mounted.- Creates a root React render container using `ReactDOM.createRoot`.- Renders the App component inside the root element, wrapped in a `React.StrictMode` container.- Optionally logs or reports web vital statistics using the `reportWebVitals` function.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line24">line 24</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="AdminBackend"><span class="type-signature"></span>AdminBackend<span class="signature">()</span><span class="type-signature"> &rarr; {React.Element}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    AdminBackend Component - Backend interface for administrators to manage quiz questions.The AdminBackend component provides an interface for administrators to view, edit, and save quiz questions.It fetches the questions from the server using axios and allows administrators to edit the question text,answer options, and scores associated with each option.State Management:- `questions`: An array of questions fetched from the server.- `editingIndex`: The index of the question currently being edited, or `null` if no question is being edited.- `editingQuestion`: An object representing the question currently being edited, with properties for the question text, answer options, and scores.Main Functionalities:- Redirects non-admin users to the admin login page.- Fetches questions from the server and stores them in the state.- Allows administrators to edit questions, including the question text, answer options, and scores.- Sends updated questions to the server and updates the local state with the changes.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="AdminBackend.js.html">AdminBackend.js</a>, <a href="AdminBackend.js.html#line24">line 24</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The rendered component, including the list of questions and editing interface for administrators.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">React.Element</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="AdminLogin"><span class="type-signature"></span>AdminLogin<span class="signature">()</span><span class="type-signature"> &rarr; {React.Element}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    AdminLogin Component - Provides a login interface for administrators.The AdminLogin component renders a simple login form that allows administrators to enter a username and password.It performs a basic client-side check of the credentials and, if valid, sets a flag in local storage to indicatethat the user is an administrator. The user is then redirected to the admin backend.Note: This component includes a very simplistic and insecure authentication check that is suitable only for demonstrationor development purposes. In a real application, the username and password should be sent to the server for validation,and a secure authentication token should be returned and managed appropriately.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="AdminLogin.js.html">AdminLogin.js</a>, <a href="AdminLogin.js.html#line17">line 17</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The rendered login form, including input fields for the username and password, and a submit button.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">React.Element</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="App"><span class="type-signature"></span>App<span class="signature">()</span><span class="type-signature"> &rarr; {React.Element}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    App Component - Main application component for the College Degree Helper.The App component is responsible for defining the main structure of the applicationand setting up the routing using React Router. The routing is essential for navigatingbetween different parts of the application and providing a seamless user experience.Routes:1. "/" - The root path directs users to the main Quiz component, where they can participate   in a quiz to determine suitable college degrees.2. "/admin/login" - This path leads to the AdminLogin component, where administrators can   log in to access backend functionalities.3. "/admin/backend" - This path leads to the AdminBackend component, accessible only to   administrators, where they can manage various backend operations.The use of React Router allows for dynamic navigation without the need for page reloads,enhancing the overall responsiveness and user experience of the application.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="App.js.html">App.js</a>, <a href="App.js.html#line27">line 27</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The rendered component, including the Router and defined Routes.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">React.Element</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="Quiz"><span class="type-signature"></span>Quiz<span class="signature">()</span><span class="type-signature"> &rarr; {React.Element}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Quiz Component - Renders a quiz interface for users to participate in.The Quiz component fetches a set of questions from the server and presents them to the user one by one.Users can select answers, and their selections are scored according to predefined criteria. The scoresare accumulated for different categories (e.g., collegeARTSCI, collegeBA, etc.), and the best-fittingcategories are presented to the user at the end of the quiz.Main Functionalities:- Fetches questions from the server using Axios and stores them in the state.- Manages the current question index and the user's scores across different categories.- Handles user's answer selections and updates the scores accordingly.- Determines the best-fitting categories based on the final scores and displays the results.State Variables:- questions: An array of questions fetched from the server.- currentQuestion: The index of the current question being displayed.- showScore: A boolean flag to control whether to show the quiz questions or the final results.- scores: An object containing the accumulated scores for different categories.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="quiz.js.html">quiz.js</a>, <a href="quiz.js.html#line26">line 26</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The rendered quiz interface, including the questions, answer options, and final results.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">React.Element</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-questions.html">questions</a></li><li><a href="module-server.html">server</a></li></ul><h3>Global</h3><ul><li><a href="global.html#AdminBackend">AdminBackend</a></li><li><a href="global.html#AdminLogin">AdminLogin</a></li><li><a href="global.html#App">App</a></li><li><a href="global.html#Quiz">Quiz</a></li><li><a href="global.html#root">root</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Mon Aug 07 2023 15:45:45 GMT-0500 (Central Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

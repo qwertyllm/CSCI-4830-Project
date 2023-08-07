@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: quiz.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: quiz.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
+/**
+ * Quiz Component - Renders a quiz interface for users to participate in.
+ *
+ * The Quiz component fetches a set of questions from the server and presents them to the user one by one.
+ * Users can select answers, and their selections are scored according to predefined criteria. The scores
+ * are accumulated for different categories (e.g., collegeARTSCI, collegeBA, etc.), and the best-fitting
+ * categories are presented to the user at the end of the quiz.
+ *
+ * Main Functionalities:
+ * - Fetches questions from the server using Axios and stores them in the state.
+ * - Manages the current question index and the user's scores across different categories.
+ * - Handles user's answer selections and updates the scores accordingly.
+ * - Determines the best-fitting categories based on the final scores and displays the results.
+ *
+ * State Variables:
+ * - questions: An array of questions fetched from the server.
+ * - currentQuestion: The index of the current question being displayed.
+ * - showScore: A boolean flag to control whether to show the quiz questions or the final results.
+ * - scores: An object containing the accumulated scores for different categories.
+ *
+ * @returns {React.Element} The rendered quiz interface, including the questions, answer options, and final results.
+ */
+function Quiz() {
+    const [questions, setQuestions] = useState([]);
+    const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [showScore, setShowScore] = useState(false);
+
+    const [scores, updateScores] = useState({
+        collegeARTSCI: 0,
+        collegeBA: 0,
+        collegeEDU: 0,
+        collegeCOM: 0,
+        collegeSCITECH: 0,
+        collegePUBLIC: 0
+    });
+
+    useEffect(() => {
+        axios.get('http://localhost:3001/api/questions')
+            .then(response => {
+                setQuestions(response.data);
+            })
+            .catch(error => {
+                console.error('Something went wrong!', error);
+            });
+    }, []);
+
+    const handleAnswerButtonClick = (index) => {
+        const scoreKeys = Object.keys(scores); // ["collegeARTSCI", "collegeBA", ...]
+    
+        updateScores(prevScores => {
+            const newScores = { ...prevScores };
+            newScores[scoreKeys[index]] += questions[currentQuestion].scores[index];
+            return newScores;
+        });
+    
+        const nextQuestion = currentQuestion + 1;
+        if (nextQuestion &lt; questions.length) {
+            setCurrentQuestion(nextQuestion);
+        } else {
+            setShowScore(true);
+        }
+    };
+
+    const bestFits = (scores) => {
+        let maxValue = 0;
+        for (const [key, value] of Object.entries(scores)) {
+            maxValue = Math.max(maxValue, value)
+        }
+        let bestFits = [];
+        for (const [key, value] of Object.entries(scores)) {
+            if (maxValue == value) {
+                bestFits.push(key);
+            }
+        }
+        return bestFits.join(' and ');
+    }
+
+    return (
+        &lt;div className="question-container">
+            {showScore ? (
+                &lt;div className="final-result-container">
+                    &lt;h2>Quiz Results&lt;/h2>
+                    &lt;h3>Best Fits: {[bestFits(scores)]}&lt;/h3>
+                &lt;/div>
+            ) : (
+                &lt;div className="question-card">
+                    {questions.length > 0 ? (
+                        &lt;>
+                            &lt;h2>&lt;div className="question-number">Question {currentQuestion + 1} of {questions.length}&lt;/div>&lt;/h2>
+                            &lt;h2>{questions[currentQuestion].questionText}&lt;/h2>
+                            &lt;div className="answer-container">
+                                {questions[currentQuestion].answerOptions.map((answerOption, index) => (
+                                    &lt;button
+                                    key={index}
+                                    onClick={() => handleAnswerButtonClick(index)}
+                                >
+                                    {answerOption}
+                                &lt;/button>
+                                ))}
+                            &lt;/div>
+                        &lt;/>
+                    ) : (
+                        &lt;p>Loading questions...&lt;/p>
+                    )}
+                &lt;/div>
+            )}
+        &lt;/div>
+    );
+}
+
+export default Quiz;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-questions.html">questions</a></li><li><a href="module-server.html">server</a></li></ul><h3>Global</h3><ul><li><a href="global.html#AdminBackend">AdminBackend</a></li><li><a href="global.html#AdminLogin">AdminLogin</a></li><li><a href="global.html#App">App</a></li><li><a href="global.html#Quiz">Quiz</a></li><li><a href="global.html#root">root</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Mon Aug 07 2023 15:45:44 GMT-0500 (Central Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

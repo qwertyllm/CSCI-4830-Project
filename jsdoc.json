@@ -1,0 +1,20 @@
+{
+    "source": {
+      "include": ["src"],
+      "includePattern": ".+\\.js(doc|x)?$",
+      "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "plugins": [],
+    "templates": {
+      "cleverLinks": false,
+      "monospaceLinks": false
+    },
+    "opts": {
+      "destination": "out/",
+      "encoding": "utf8",
+      "private": true,
+      "recurse": true,
+      "template": "templates/default"
+    }
+  }
+  
