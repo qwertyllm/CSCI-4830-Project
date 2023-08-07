@@ -1,6 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+/**
+ * Quiz Component - Renders a quiz interface for users to participate in.
+ *
+ * The Quiz component fetches a set of questions from the server and presents them to the user one by one.
+ * Users can select answers, and their selections are scored according to predefined criteria. The scores
+ * are accumulated for different categories (e.g., collegeARTSCI, collegeBA, etc.), and the best-fitting
+ * categories are presented to the user at the end of the quiz.
+ *
+ * Main Functionalities:
+ * - Fetches questions from the server using Axios and stores them in the state.
+ * - Manages the current question index and the user's scores across different categories.
+ * - Handles user's answer selections and updates the scores accordingly.
+ * - Determines the best-fitting categories based on the final scores and displays the results.
+ *
+ * State Variables:
+ * - questions: An array of questions fetched from the server.
+ * - currentQuestion: The index of the current question being displayed.
+ * - showScore: A boolean flag to control whether to show the quiz questions or the final results.
+ * - scores: An object containing the accumulated scores for different categories.
+ *
+ * @returns {React.Element} The rendered quiz interface, including the questions, answer options, and final results.
+ */
 function Quiz() {
     const [questions, setQuestions] = useState([]);
     const [currentQuestion, setCurrentQuestion] = useState(0);

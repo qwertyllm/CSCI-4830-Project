@@ -1,6 +1,19 @@
 import React, {useState}  from "react";
 import axios from "axios";
 
+/**
+ * AdminLogin Component - Provides a login interface for administrators.
+ *
+ * The AdminLogin component renders a simple login form that allows administrators to enter a username and password.
+ * It performs a basic client-side check of the credentials and, if valid, sets a flag in local storage to indicate
+ * that the user is an administrator. The user is then redirected to the admin backend.
+ *
+ * Note: This component includes a very simplistic and insecure authentication check that is suitable only for demonstration
+ * or development purposes. In a real application, the username and password should be sent to the server for validation,
+ * and a secure authentication token should be returned and managed appropriately.
+ *
+ * @returns {React.Element} The rendered login form, including input fields for the username and password, and a submit button.
+ */
 const AdminLogin = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
