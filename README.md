@@ -1,3 +1,5 @@
+
+-------------------------------------------------------------------------------------
 to update the documentation
 jsdoc -c jsdoc.json
 git checkout gh-pages
@@ -6,7 +8,7 @@ cp -r C:\Users\path\out\* .
 git add .
 git commit -m "Updated JSDoc documentation"
 git push origin gh-pages
--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
 to push changes to github repository
 change(cd) to folder of the local repository
 git add .
