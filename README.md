@@ -45,20 +45,6 @@ https://github.com/qwertyllm/CSCI-4830-Project/tree/gh-pages
 
 documentation: https://qwertyllm.github.io/CSCI-4830-Project/out/
 
-Demo videos:
-
-Milestone 1: https://unomaha.instructure.com/courses/69191/assignments/1014370/submissions/28723
-Milestone 2:
-https://www.youtube.com/watch?v=MFoj_3VaNQg
-Milestone 3:
-https://unomaha.instructure.com/courses/69191/discussion_topics/818730
-Milestone 4:
-
-Google Drive links:
-old: https://drive.google.com/drive/u/0/folders/1Q3AKmT8wh7jzmZi08be6dKAX6dd_g560
-new: https://drive.google.com/drive/u/0/folders/1tOVdTCjWVd0vuwoHzbasLoltdpSNjNbl
-
-
 
 how to use, if you want to open the college degree helper app for testing
 
