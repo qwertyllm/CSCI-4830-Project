@@ -1,15 +1,11 @@
 /**
- * Server Module - Express server for handling quiz-related API requests.
+ * Server: A simple express server for fetching question data and updating the questionnaire.
+ * 
+ * GET "/api/questions": Fetches all the questions from questions.json.
+ * PUT "/api/questions/:index": Updates the questions by obtaining the index of their array element ":index" and creating an object that stores
+ * const { questionText, answerOptions, scores } = req.body; to be updated.
  *
- * This module sets up an Express server that provides endpoints for fetching and updating quiz questions.
- * It uses CORS middleware to enable cross-origin requests, allowing the frontend to communicate with the server.
- *
- * Endpoints:
- * 1. GET "/api/questions" - Fetches all the questions from the questions.json file and returns them as a JSON array.
- * 2. PUT "/api/questions/:index" - Updates a specific question by index. Requires the questionText, answerOptions, and scores in the request body.
- *    Returns a 400 error if any required fields are missing, and a 404 error if the question index is not found.
- *
- * The server listens on port 3001 and logs a message to the console when it's running.
+ * The server listens on port 3001.
  *
  * @module server
  * @requires express

@@ -2,26 +2,18 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 /**
- * Quiz Component - Renders a quiz interface for users to participate in.
+ * Quiz: The main component that renders the quiz interface.
  *
- * The Quiz component fetches a set of questions from the server and presents them to the user one by one.
- * Users can select answers, and their selections are scored according to predefined criteria. The scores
- * are accumulated for different categories (e.g., collegeARTSCI, collegeBA, etc.), and the best-fitting
- * categories are presented to the user at the end of the quiz.
+ * The Quiz component fetches a set of questions from the server, using the axios ibrary, and presents them to the user one by one.
+ * 
+ * Users can answer a quuestionnaire that leads them to the results page that contains 
+ * the recommended college/major and a link to to read up on the college and major info, at the University of Nebraska at Omaha's website.
+ * 
+ * A decision tree is used to record answers.
  *
- * Main Functionalities:
- * - Fetches questions from the server using Axios and stores them in the state.
- * - Manages the current question index and the user's scores across different categories.
- * - Handles user's answer selections and updates the scores accordingly.
- * - Determines the best-fitting categories based on the final scores and displays the results.
- *
- * State Variables:
- * - questions: An array of questions fetched from the server.
- * - currentQuestion: The index of the current question being displayed.
- * - showScore: A boolean flag to control whether to show the quiz questions or the final results.
- * - scores: An object containing the accumulated scores for different categories.
- *
- * @returns {React.Element} The rendered quiz interface, including the questions, answer options, and final results.
+ * We have a simple handleAnswerButtonClick and bestFits function that handle what happens an answer option is clicked and what is displayed at the results page.
+ * 
+ * @returns {React.Element} The rendered quiz interface, questions, answer options, and final results.
  */
 function Quiz() {
     const [questions, setQuestions] = useState([]);
@@ -37,6 +29,15 @@ function Quiz() {
         collegePUBLIC: 0
     });
 
+    const collegeLinks = {
+        collegeARTSCI: 'https://www.unomaha.edu/college-of-arts-and-sciences/index.php',
+        collegeBA: 'https://www.unomaha.edu/college-of-business-administration/index.php';
+        collegeEDU: 'https://www.unomaha.edu/college-of-education-health-and-human-sciences/index.php',
+        collegeCOM: 'https://www.unomaha.edu/college-of-communication-fine-arts-and-media/communication/index.php',
+        collegeSCITECH: 'https://www.unomaha.edu/college-of-information-science-and-technology/index.php',
+        collegePUBLIC: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/index.php',
+    }
+
     useEffect(() => {
         axios.get('http://localhost:3001/api/questions')
             .then(response => {
@@ -51,7 +52,7 @@ function Quiz() {
         const scoreKeys = Object.keys(scores); // ["collegeARTSCI", "collegeBA", ...]
     
         updateScores(prevScores => {
-            const newScores = { ...prevScores };
+            const newScores = { ...prevScores }; // Updating the scores when an answer option is clicked
             newScores[scoreKeys[index]] += questions[currentQuestion].scores[index];
             return newScores;
         });
@@ -72,10 +73,9 @@ function Quiz() {
         let bestFits = [];
         for (const [key, value] of Object.entries(scores)) {
             if (maxValue == value) {
-                bestFits.push(key);
-            }
+                bestFits.push({ category: key, link: collegeLinks[key] });            }
         }
-        return bestFits.join(' and ');
+        return bestFits;
     }
 
     return (
@@ -84,6 +84,9 @@ function Quiz() {
                 <div className="final-result-container">
                     <h2>Quiz Results</h2>
                     <h3>Best Fits: {[bestFits(scores)]}</h3>
+                    {bestFits(scores).map((fit, index) => (
+                        <p key={index}><a href={fit.link} target="_blank">{fit.category}</a></p>
+                    ))}
                 </div>
             ) : (
                 <div className="question-card">

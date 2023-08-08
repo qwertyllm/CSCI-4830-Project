@@ -6,23 +6,17 @@ import AdminLogin from "./AdminLogin";
 import AdminBackend from "./AdminBackend";
 
 /**
- * App Component - Main application component for the College Degree Helper.
+ * App: Main application for the College Degree Helper website
  *
- * The App component is responsible for defining the main structure of the application
- * and setting up the routing using React Router. The routing is essential for navigating
- * between different parts of the application and providing a seamless user experience.
- *
- * Routes:
- * 1. "/" - The root path directs users to the main Quiz component, where they can participate
- *    in a quiz to determine suitable college degrees.
- * 2. "/admin/login" - This path leads to the AdminLogin component, where administrators can
- *    log in to access backend functionalities.
- * 3. "/admin/backend" - This path leads to the AdminBackend component, accessible only to
- *    administrators, where they can manage various backend operations.
- *
- * The use of React Router allows for dynamic navigation without the need for page reloads,
- * enhancing the overall responsiveness and user experience of the application.
- * @returns {React.Element} The rendered component, including the Router and defined Routes.
+ * We use React Routes to handle the transporting the user to different pages. 
+ * 
+ * The pages we have are quiz, adminlogin, and adminbackend.
+ * 
+ * The Route path states that for the root path "/" we redirect the user to the Quiz component, and "/admin/login" for the admin login component
+ * and "/admin/backend" component for the backend, to which the admin can change the questions, answer options, and reallocate points for users
+ * on the local network.
+ * 
+ * @returns {React.Element} The rendered component
  */
 function App() {
   return (
