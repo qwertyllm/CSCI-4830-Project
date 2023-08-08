@@ -46,6 +46,69 @@ taskkill /PID num /F
 
 ---
 
+Github
+https://github.com/qwertyllm/CSCI-4830-Project/tree/master
+https://github.com/qwertyllm/CSCI-4830-Project/tree/gh-pages
+
+documentation: https://qwertyllm.github.io/CSCI-4830-Project/out/
+
+Demo videos:
+
+Milestone 1: https://unomaha.instructure.com/courses/69191/assignments/1014370/submissions/28723
+Milestone 2:
+https://www.youtube.com/watch?v=MFoj_3VaNQg
+Milestone 3:
+https://unomaha.instructure.com/courses/69191/discussion_topics/818730
+Milestone 4:
+
+Google Drive links:
+old: https://drive.google.com/drive/u/0/folders/1Q3AKmT8wh7jzmZi08be6dKAX6dd_g560
+new: https://drive.google.com/drive/u/0/folders/1tOVdTCjWVd0vuwoHzbasLoltdpSNjNbl
+
+
+
+how to use, if you want to open the college degree helper app for testing
+
+-----------------------------
+download the repository
+and put the folder called CSCI-4830-Project into a project folder
+
+open the project, CSCI-4830-Project, in an editor like visual studio code
+
+open the readme file, package.json (just to make sure)
+
+then run 
+npm install
+to install the dependencies
+
+then
+npm start
+
+-------------------------
+
+if you want to open the college degree helper app in the local area network, don't do npm start
+
+cd to the src folder then do node server.js
+
+then do cd ..
+
+then get your ip using ipconfig and do the below
+
+$env:HOST="192.168.56.1"; npm start
+
+the server automatically listens in on port 3001
+the app runs on port 3000
+------------------------
+
+to login as an administrator in the search bar do http://192.168.56.1:3000/admin/login
+which takes you to http://192.168.56.1:3000/admin/backend
+
+username: admin
+
+password: password
+
+
+---
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
