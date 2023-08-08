@@ -1,5 +1,3 @@
-
--------------------------------------------------------------------------------------
 to update the documentation
 jsdoc -c jsdoc.json
 git checkout gh-pages
@@ -14,7 +12,6 @@ change(cd) to folder of the local repository
 git add .
 git commit -m "Description of changes"
 git push origin master
-
 -------------------------------------------------------------------------------------
 to run reactapp on the local network as an administrator,
 
