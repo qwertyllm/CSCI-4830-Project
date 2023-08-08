@@ -4,10 +4,11 @@ git add .
 git commit -m "Description of changes"
 git push origin master
 
--------------------------------------------------------------------------------------
+---
+
 to run reactapp on the local network as an administrator,
 
-first 
+first
 
 cd to the src folder
 
@@ -19,11 +20,13 @@ cd to the CSCI-4830-Project folder
 
 find ipv4 address using ipconfig
 
-change the host using 
+change the host using
 $env:HOST="192.168.56.1"; npm start
 the server automatically listens in on port 3001
 
-for users to join "http://ip-address-of-host:3000"
+---
+
+## for users to join "http://ip-address-of-host:3000"
 
 for administrators, login to http://localhost:3000/admin/login with username = admin
 password = password , you can change the credentials in AdminLogin.js
@@ -33,15 +36,16 @@ which takes you to http://localhost:3000/admin/backend
 otherwise for users, just go to http://localhost:3000
 because this is a testing version, admin username and password is stored in the code in
 
+---
 
---------------------------------------------------------------------------------------
-Otherwise, for testing just use npm start, without starting a server
---------------------------------------------------------------------------------------
+## Otherwise, for testing just use npm start, without starting a server
 
 to kill a port
 netstat -ano | findstr :3000
-taskkill /PID num  /F
---------------------------------------------------------------------------------------
+taskkill /PID num /F
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

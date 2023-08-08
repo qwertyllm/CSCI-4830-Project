@@ -1,113 +1,107 @@
 [
     {
-        "questionText" : "Question 1: pick a college",
+        "questionText" : "Question 1: Pick a college",
         "answerOptions": ["Arts and Sciences", "Business and Administration", "Education", "Communications", "Science and Technology", "Public Affairs"],
         "scores"       : [1, 1, 1, 1, 1, 1]
     },
     {
         "questionText" : "Question 2: Where would you rather vacation?",
-        "answerOptions": ["Arts and Sciences", "Business and Administration", "Education", "Communications", "Science and Technology", "Public Affairs"],
+        "answerOptions": ["Art Museum", "Business Conference", "Educational Seminar", "Media Festival", "Tech Expo", "Political Rally"],
         "scores"       : [1, 1, 1, 1, 1, 1]
     },
     {
         "questionText" : "Question 3: Where do you excel in school?",
-        "answerOptions": ["Arts and Sciences", "Business and Administration", "Education", "Communications", "Science and Technology", "Public Affairs"],
-        "scores"       : [0, 0, 1, 0, 0, 0]
-    },
-    {
-        "questionText" : "Question 4: When going to college, what are you focused on learning more about?",
-        "answerOptions": ["Arts and Sciences", "Business and Administration", "Education", "Communications", "Science and Technology", "Public Affairs"],
-        "scores"       : [1, 1, 1, 0, 1, 1]
-    },
-    {
-        "questionText" : "Question 5: What conference of the following would you attend?",
-        "answerOptions": ["Arts and Sciences", "Business and Administration", "Education", "Communications", "Science and Technology", "Public Affairs"],
-        "scores"       : [0, 1, 2, 3, 4, 5]
-    },
-    {
-        "questionText" : "Question 6: What subreddit would you rather join??",
-        "answerOptions": ["Arts and Sciences", "Business and Administration", "Education", "Communications", "Science and Technology", "Public Affairs"],
-        "scores"       : [5, 5, 5, 5, 5, 5]
-    },
-    {
-        "questionText" : "Question 7: What did you look forward to most in school?",
-        "answerOptions": ["English", "Leading others", "Tutoring others", "Talking with other students", "Mathematics", "Speech/Debate"],
+        "answerOptions": ["Art and Literature", "Business and Economics", "Teaching and Tutoring", "Communication and Media", "Science and Math", "Social Sciences"],
         "scores"       : [1, 1, 1, 1, 1, 1]
     },
     {
-        "questionText" : "Question 7: I like to have a range of correct answers when answering questions?",
-        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
-        "scores"       : [5, 5, 5, 5, 5, 5]
-    }
-    ,
-    {
-        "questionText" : "Question 8: The assignments I found the easiest/enjoyed the most are...",
-        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
-        "scores"       : [5, 5, 5, 5, 5, 5]
+        "questionText" : "Question 4: When going to college, what are you focused on learning more about?",
+        "answerOptions": ["Literature and Culture", "Entrepreneurship and Finance", "Teaching Methods and Psychology", "Journalism and Media Studies", "Innovation and Research", "Law and Government"],
+        "scores"       : [1, 1, 1, 1, 1, 1]
     },
     {
-        "questionText" : "Question 8: I like the idea of having a right and wrong answer?",
-        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
-        "scores"       : [5, 5, 5, 5, 5, 5]
+        "questionText" : "Question 5: What conference of the following would you attend?",
+        "answerOptions": ["Art Symposium", "Business Summit", "Education Expo", "Communications Workshop", "Tech Fair", "Public Affairs Forum"],
+        "scores"       : [1, 1, 1, 1, 1, 1]
     },
     {
-        "questionText" : "Question 9: Where would you rather solve a problem?",
-        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
-        "scores"       : [5, 5, 5, 5, 5, 5]
+        "questionText" : "Question 6: What subreddit would you rather join?",
+        "answerOptions": ["/r/Art", "/r/Business", "/r/Education", "/r/Communications", "/r/Tech", "/r/Politics"],
+        "scores"       : [1, 1, 1, 1, 1, 1]
     },
     {
-        "questionText" : "Question 10: I enjoy the idea of working from home?",
-        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
-        "scores"       : [5, 5, 5, 5, 5, 5]
+        "questionText" : "Question 7: What did you look forward to most in school?",
+        "answerOptions": ["Literature Class", "Leadership Workshop", "Peer Tutoring", "Debates and Discussions", "Math Challenges", "Speech/Debate Club"],
+        "scores"       : [1, 1, 1, 1, 1, 1]
     },
     {
-        "questionText" : "Question 11: I am not confortable leading a team?",
-        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
-        "scores"       : [5, 5, 5, 5, 5, 5]
+        "questionText": "Question 8: The assignments I found the easiest/enjoyed the most are...",
+        "answerOptions": ["Literature Analysis", "Business Plans", "Educational Projects", "Media Creation", "Scientific Research", "Political Analysis"],
+        "scores": [1, 1, 1, 1, 1, 1]
     },
     {
-        "questionText" : "Question 12: I like things being in order",
-        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
-        "scores"       : [5, 5, 5, 5, 5, 5]
+        "questionText" : "Question 9: The assignments I found the easiest/enjoyed the most are...",
+        "answerOptions": ["Creative Writing", "Business Case Studies", "Lesson Planning", "Creating Video Content", "Scientific Experiments", "Community Engagement"],
+        "scores"       : [1, 1, 1, 1, 1, 1]
     },
     {
-        "questionText" : "Question 13: I like having creative freedom",
-        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
-        "scores"       : [5, 5, 5, 5, 5, 5]
+        "questionText" : "Question 10: Where would you rather solve a problem?",
+        "answerOptions": ["In a Literature Class", "In a Business Meeting", "In a Teaching Workshop", "In a Media Studio", "In a Tech Lab", "In a Government Office"],
+        "scores"       : [1, 1, 1, 1, 1, 1]
     },
     {
-        "questionText" : "Question 14: I have a wild imagination",
-        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
-        "scores"       : [5, 5, 5, 5, 5, 5]
+        "questionText" : "Question 11: I enjoy the idea of working from home?",
+        "answerOptions": ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
+        "scores"       : [1, 1, 1, 1, 1, 1]
     },
     {
-        "questionText" : "Question 15: I enjoy being able to communicate with others",
-        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
-        "scores"       : [5, 5, 5, 5, 5, 5]
+        "questionText" : "Question 12: I am not comfortable leading a team?",
+        "answerOptions": ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
+        "scores"       : [1, 1, 1, 1, 1, 1]
     },
     {
-        "questionText" : "Question 16: Of the following people, whos class would you rather attend??",
-        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
-        "scores"       : [5, 5, 5, 5, 5, 5]
+        "questionText" : "Question 13: I like things being in order",
+        "answerOptions": ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
+        "scores"       : [1, 1, 1, 1, 1, 1]
     },
     {
-        "questionText" : "Question 17: I enjoy technical things",
-        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
-        "scores"       : [5, 5, 5, 5, 5, 5]
+        "questionText" : "Question 14: I like having creative freedom",
+        "answerOptions": ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
+        "scores"       : [1, 1, 1, 1, 1, 1]
     },
     {
-        "questionText" : "Question 18: What project would you rather be apart of?",
-        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
-        "scores"       : [5, 5, 5, 5, 5, 5]
+        "questionText" : "Question 15: I have a wild imagination",
+        "answerOptions": ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
+        "scores"       : [1, 1, 1, 1, 1, 1]
     },
     {
-        "questionText" : "Question 19: What kind of class would you rather attend?",
-        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
-        "scores"       : [5, 5, 5, 5, 5, 5]
+        "questionText" : "Question 16: I enjoy being able to communicate with others",
+        "answerOptions": ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
+        "scores"       : [1, 1, 1, 1, 1, 1]
     },
     {
-        "questionText" : "Question 20: I am a follower?",
-        "answerOptions": ["ans1", "ans2", "ans3", "ans4", "ans5", "ans6"],
-        "scores"       : [5, 5, 5, 5, 5, 5]
+        "questionText" : "Question 17: Of the following people, whose class would you rather attend?",
+        "answerOptions": ["Shakespeare's Literature", "Warren Buffett's Business", "Maria Montessori's Education", "Walter Cronkite's Journalism", "Albert Einstein's Physics", "Barack Obama's Political Science"],
+        "scores"       : [1, 1, 1, 1, 1, 1]
+    },
+    {
+        "questionText" : "Question 18: I enjoy technical things",
+        "answerOptions": ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
+        "scores"       : [1, 1, 1, 1, 1, 1]
+    },
+    {
+        "questionText" : "Question 19: What project would you rather be a part of?",
+        "answerOptions": ["Writing a Novel", "Launching a Startup", "Developing an Educational Program", "Producing a Documentary", "Building a Robot", "Planning a City"],
+        "scores"       : [1, 1, 1, 1, 1, 1]
+    },
+    {
+        "questionText" : "Question 20: What kind of class would you rather attend?",
+        "answerOptions": ["Art Workshop", "Financial Seminar", "Teacher Training", "Film Production", "Computer Science Lab", "Legal Studies"],
+        "scores"       : [1, 1, 1, 1, 1, 1]
+    },
+    {
+        "questionText" : "Question 21: I am a follower?",
+        "answerOptions": ["Strongly Disagree", "Disagree", "Slightly Disagree", "Slightly Agree", "Agree", "Strongly Agree"],
+        "scores"       : [1, 1, 1, 1, 1, 1]
     }
 ]

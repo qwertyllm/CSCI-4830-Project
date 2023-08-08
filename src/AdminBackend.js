@@ -3,20 +3,21 @@ import axios from "axios";
 
 /**
  * AdminBackend: Interface for administrators to change quiz questions, answer options, and update the decision tree.
- * 
- * Specifically, the admin can perform the actions of viewing, editing, saving, and updating content that the user interacts with. 
+ *
+ * Specifically, the admin can perform the actions of viewing, editing, saving, and updating content that the user interacts with.
  *
  * We use axios to perform get and put requests. We obtain the question array, the index of questions, and the question to be edited.
- * 
+ *
  * @returns {React.Element} The rendered component.
  */
 function AdminBackend() {
   const [questions, setQuestions] = useState([]); //questions array
-  const [editingIndex, setEditingIndex] = useState(null);//index of questions
-  const [editingQuestion, setEditingQuestion] = useState({//question to be edited
+  const [editingIndex, setEditingIndex] = useState(null); //index of questions
+  const [editingQuestion, setEditingQuestion] = useState({
+    //question to be edited
     questionText: "",
     answerOptions: [],
-    scores: []
+    scores: [],
   });
 
   useEffect(() => {
@@ -26,7 +27,7 @@ function AdminBackend() {
       axios
         .get("http://localhost:3001/api/questions")
         .then((response) => setQuestions(response.data))
-        .catch((error) => console.log(error));//if successful admin login, ability to change questions, access granted
+        .catch((error) => console.log(error)); //if successful admin login, ability to change questions, access granted
     }
   }, []);
 
@@ -36,24 +37,30 @@ function AdminBackend() {
   };
 
   const handleQuestionChange = (event) => {
-    setEditingQuestion(prev => ({ ...prev, questionText: event.target.value }));
+    setEditingQuestion((prev) => ({
+      ...prev,
+      questionText: event.target.value,
+    }));
   };
 
   const handleAnswerChange = (idx) => (event) => {
     const options = [...editingQuestion.answerOptions];
     options[idx] = event.target.value;
-    setEditingQuestion(prev => ({ ...prev, answerOptions: options }));
+    setEditingQuestion((prev) => ({ ...prev, answerOptions: options }));
   };
 
   const handleScoreChange = (idx) => (event) => {
     const scores = [...editingQuestion.scores];
     scores[idx] = Number(event.target.value);
-    setEditingQuestion(prev => ({ ...prev, scores }));
+    setEditingQuestion((prev) => ({ ...prev, scores }));
   };
 
   const handleSaveClick = () => {
     axios
-      .put(`http://localhost:3001/api/questions/${editingIndex}`, editingQuestion)
+      .put(
+        `http://localhost:3001/api/questions/${editingIndex}`,
+        editingQuestion
+      )
       .then((response) => {
         const updatedQuestions = [...questions];
         updatedQuestions[editingIndex] = editingQuestion;
@@ -97,7 +104,7 @@ function AdminBackend() {
             <>
               <p>{question.questionText}</p>
               {question.answerOptions.join(", ")}
-              <br/>
+              <br />
               {question.scores.join(", ")}
               <button onClick={() => handleEditClick(index)}>Edit</button>
             </>
