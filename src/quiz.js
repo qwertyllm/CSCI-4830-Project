@@ -87,9 +87,9 @@ function Quiz() {
   };
 
   return (
-    <div className="question-container">
+    <div className="question-container" data-testid="quiz-screen">
       {showScore ? (
-        <div className="final-result-container">
+        <div className="final-result-container" data-testid="result-screen">
           <h2>Quiz Results</h2>
           <h3>Best Fits:</h3>
           <ul>
@@ -103,21 +103,22 @@ function Quiz() {
           </ul>
         </div>
       ) : (
-        <div className="question-card">
+        <div className="question-card" data-testid="question-screen">
           {questions.length > 0 ? (
             <>
               <h2>
-                <div className="question-number">
+                <div className="question-number" data-testid="question-num">
                   Question {currentQuestion + 1} of {questions.length}
                 </div>
               </h2>
               <h2>{questions[currentQuestion].questionText}</h2>
-              <div className="answer-container">
+              <div className="answer-container" data-testid="answer-box">
                 {questions[currentQuestion].answerOptions.map(
                   (answerOption, index) => (
                     <button
                       key={index}
                       onClick={() => handleAnswerButtonClick(index)}
+                      data-testid="button"
                     >
                       {answerOption}
                     </button>
